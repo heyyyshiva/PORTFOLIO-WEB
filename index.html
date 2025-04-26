@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced AI Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add Three.js for 3D effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Add GSAP for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Add Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">Portfolio.AI</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-item">Home</a></li>
+            <li><a href="#about" class="nav-item">About</a></li>
+            <li><a href="#projects" class="nav-item">Projects</a></li>
+            <li><a href="#skills" class="nav-item">Skills</a></li>
+            <li><a href="#contact" class="nav-item">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <h1 class="glitch-text">Welcome to My <span class="highlight">AI-Powered</span> Portfolio</h1>
+            <p class="typing-text"></p>
+            <div class="cta-buttons">
+                <a href="#projects" class="cta-primary">View Projects</a>
+                <a href="#contact" class="cta-secondary">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-3d">
+            <canvas id="hero-canvas"></canvas>
+        </div>
+        <div class="programming-slideshow">
+            <div class="slide-track">
+                <div class="language-slide">
+                    <i class="fab fa-python"></i>
+                </div>
+                <div class="language-slide">
+                    <i class="fab fa-js"></i>
+                </div>
+                <div class="language-slide">
+                    <i class="fab fa-java"></i>
+                </div>
+                <div class="language-slide">
+                    <i class="fab fa-react"></i>
+                </div>
+                <div class="language-slide">
+                    <i class="fab fa-node"></i>
+                </div>
+                <div class="language-slide">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="language-slide">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="language-slide">
+                    <i class="fab fa-angular"></i>
+                </div>
+                <div class="language-slide">
+                    <i class="fab fa-vuejs"></i>
+                </div>
+                <div class="language-slide">
+                    <i class="fab fa-php"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="about-description">I'm a passionate developer with expertise in AI and web development. My work combines creative design with intelligent functionality to create unique user experiences.</p>
+                <div class="dynamic-facts"></div>
+                <div class="tech-stack">
+                    <h3>Tech Stack</h3>
+                    <div class="tech-icons">
+                        <i class="fab fa-python" title="Python"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                        <i class="fab fa-react" title="React"></i>
+                        <i class="fab fa-node" title="Node.js"></i>
+                        <i class="fab fa-aws" title="AWS"></i>
+                        <i class="fab fa-docker" title="Docker"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="image-container">
+                    <div class="image-glitch-effect">
+                        <img src="jin.jpg" alt="Profile Picture">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">My Projects</h2>
+        <div class="filter-buttons">
+            <button class="filter-button active">All</button>
+            <button class="filter-button">AI/ML</button>
+            <button class="filter-button">Web Dev</button>
+            <button class="filter-button">Mobile</button>
+        </div>
+        <div class="projects-grid">
+            <!-- AI Chat Assistant -->
+            <div class="project-card">
+                <img src="chat.png" alt="AI Chat Assistant" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">AI Chat Assistant</h3>
+                    <p class="project-description">A smart chatbot powered by machine learning</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">NLP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Smart Portfolio -->
+            <div class="project-card">
+                <img src="smart.png" alt="Smart Portfolio" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Smart Portfolio</h3>
+                    <p class="project-description">AI-powered portfolio website</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">AI</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile AI App -->
+            <div class="project-card">
+                <img src="app.jpeg" alt="Mobile AI App" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Mobile AI App</h3>
+                    <p class="project-description">AI-powered mobile application</p>
+                    <div class="project-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">TensorFlow Lite</span>
+                        <span class="tag">Mobile</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Visualization Dashboard -->
+            <div class="project-card">
+                <img src="dash.png" alt="Data Visualization Dashboard" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Data Visualization Dashboard</h3>
+                    <p class="project-description">Interactive data analytics platform</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">D3.js</span>
+                        <span class="tag">API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-container">
+            <div class="skills-grid">
+                <!-- Frontend Development -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Frontend Development
+                    </h3>
+                    <div class="skill-boxes">
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <div class="skill-icon">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <h4>React.js</h4>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <h4>JavaScript</h4>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <div class="skill-icon">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <h4>CSS/SASS</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Development -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-server"></i>
+                        Backend Development
+                    </h3>
+                    <div class="skill-boxes">
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <div class="skill-icon">
+                                    <i class="fab fa-node-js"></i>
+                                </div>
+                                <h4>Node.js</h4>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <div class="skill-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <h4>Python</h4>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h4>SQL/NoSQL</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i>
+                        Tools & Technologies
+                    </h3>
+                    <div class="skill-boxes">
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <div class="skill-icon">
+                                    <i class="fab fa-git-alt"></i>
+                                </div>
+                                <h4>Git/GitHub</h4>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <div class="skill-icon">
+                                    <i class="fab fa-docker"></i>
+                                </div>
+                                <h4>Docker</h4>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <div class="skill-icon">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <h4>AWS/Cloud</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">HIRE ME</h2>
+        <div class="contact-container">
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Name</label>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email</label>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" required></textarea>
+                    <label for="message">Message</label>
+                    <span class="focus-border"></span>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p>email@example.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="info-content">
+                            <h3>Phone</h3>
+                            <p>+1 234 567 890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-content">
+                            <h3>Location</h3>
+                            <p>New York, USA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025Portfolio.AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Scripts -->
+    <script src="three-background.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
