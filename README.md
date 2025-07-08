@@ -25,4 +25,4 @@ Home Page	Projects	Contact
 
 
 
-✨ Built with passion by Shiv Sonar ✨
+✨ Built with passion by Shiva ✨
