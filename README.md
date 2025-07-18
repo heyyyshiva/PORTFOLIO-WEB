@@ -21,7 +21,8 @@ JavaScript	Functionality & Interactivity
 📸 Preview
 
 Home Page	Projects	Contact
-![App Screenshot](assets/shiva.png)
+![App Screenshot](images/shiva.png)
+
 
 
 
